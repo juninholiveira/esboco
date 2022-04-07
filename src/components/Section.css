@@ -1,0 +1,13 @@
+.section-container {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-title > h2 {
+    text-align: left;
+}

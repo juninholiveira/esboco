@@ -1,0 +1,10 @@
+.section-colorbar {
+    width: 30px;
+}
+
+.bar {
+    background-color: green;
+    width: 4px;
+    margin: auto;
+    height: 100%;
+}

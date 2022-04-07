@@ -1,0 +1,19 @@
+.maincontent-container {
+    padding: 50px;
+}
+
+.maincontent-time {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.maincontent-ending {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    display: flex;
+}
+
+.maincontent-ending > p {
+    margin-right: 20px;
+}

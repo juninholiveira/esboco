@@ -1,0 +1,28 @@
+.section-topic {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.topic-text {
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.topic-quote {
+    color: red
+}
+
+.topic-maintext {
+    font-weight: 400;
+    font-size: 16px;
+
+    margin-bottom: 5px;
+}
+
+.topic-hiddentext {
+    font-weight: 400;
+    font-size: 16px;
+    display: block;
+}
