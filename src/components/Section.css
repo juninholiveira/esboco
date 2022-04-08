@@ -11,3 +11,16 @@
 .section-title > h2 {
     text-align: left;
 }
+
+.section-content {
+    display: flex;
+}
+
+.section-topics {
+    width: 100%;
+}
+
+.section-checkbox {
+    width: 30px;
+    height: auto;
+}
