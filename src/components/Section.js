@@ -19,10 +19,11 @@ export default function Section (props) {
         )
     })
 
-    //Checkbox click
+    //Checkbox clicked
     const [isCheckboxClicked, setIsCheckboxClicked] = useState(false)
-    function handleChange(){
+    function chackboxClicked(){
         setIsCheckboxClicked(true)
+        props.checkboxClicked(props.id)
     }
 
     return (
@@ -30,7 +31,7 @@ export default function Section (props) {
 
             <div className="section-title">
 
-                <input className="section-checkbox" type="checkbox" onChange={handleChange} disabled={isCheckboxClicked}></input> 
+                <input className="section-checkbox" type="checkbox" onChange={chackboxClicked} disabled={isCheckboxClicked}></input> 
 
                 <ArrowButton handleClick={toggleSectionContent} isActivated={isSectionContentShown} hasHiddentext="true"/>
 
@@ -40,7 +41,7 @@ export default function Section (props) {
 
             {isSectionContentShown && 
                 <div className="section-content">
-                    <SectionColorBar offsetTime={0}/>
+                    <SectionColorBar offsetTime={props.offsetTime}/>
                     <div className="section-topics">
                         {topics}
                     </div>
