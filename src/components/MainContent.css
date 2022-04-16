@@ -2,6 +2,10 @@
     padding: 50px;
 }
 
+.maincontent-header {    
+    margin-bottom: 40px;
+}
+
 .maincontent-time {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -10,7 +14,6 @@
 
 .maincontent-ending {
     margin-top: 10px;
-    margin-bottom: 40px;
     display: flex;
 }
 

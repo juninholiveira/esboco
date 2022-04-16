@@ -10,7 +10,13 @@ export default function SectionTopic (props) {
 
     //Styles conditioning
     const tabSize = (60 * (props.level - 1)) + "px"
-    const mainTextColor = props.type === "topic" ? "#579AFF" : "#ff7b00"
+    let mainTextColor
+    if(props.type === "topic")
+        mainTextColor = "#579AFF"
+    else if(props.type === "verse" || props.type === "quote")
+        mainTextColor = "#ff7b00"
+    else
+        mainTextColor = "#ff0000"
     const hiddenTextColor = props.type === "topic" ? "white" : "#ff7b00"
 
     function toggleHiddenText(){
@@ -27,7 +33,7 @@ export default function SectionTopic (props) {
                     className="topic-maintext"
                     style={{ color : mainTextColor }}
                 >
-                    {props.quote && <span className="topic-quote">CITAR </span>}
+                    {props.type === "quote" && <span className="topic-quote">CITAR </span>}
                     {props.maintext}
                 </h3>
                 {isHiddenTextShown && <p className="topic-hiddentext" style={{ color : hiddenTextColor }}>{props.hiddentext}</p>}
