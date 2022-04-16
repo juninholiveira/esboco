@@ -31,15 +31,18 @@ export default function Section (props) {
 
         // A - get expected endtime
         let expectedEndTime = convertTimeStringToSeconds(props.endingTime)
+        //let expectedEndTime = 1800
 
         // B - get current time
         let currentTime = getCurrentTimeSeconds()
+        //let currentTime = 265
 
         // C - get the amount of time expected to remain (add all left secions)
         let timeShouldLeft = 0
-        for (var i = (props.id - 1); i < props.arrayOfSectionsTime.length; i++) {
+        for (var i = (props.id); i < props.arrayOfSectionsTime.length; i++) {
             timeShouldLeft += props.arrayOfSectionsTime[i]
         }
+        //console.log("Time should left: " + timeShouldLeft)
         
         // D - subtract (A - B)
         let timeReallyLeft = expectedEndTime - currentTime

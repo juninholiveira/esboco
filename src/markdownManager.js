@@ -25,7 +25,7 @@ export function createEsbocoObject(string) {
         //Gets the time
         const timeIndex = sectionString.indexOf("&")                                                            //Gets the position of the "&", which indicates the section's time
         const tempString = sectionString.slice(timeIndex + 1)                                                   //Removes the beginning of the string, to make it start right after the "&"
-        fileObject.sections[i].time = parseInt(tempString.split("\r", 1)[0])                                    //Extracts just the single line with the time, and converts it to type of number
+        fileObject.sections[i].time = Number(tempString.split("\r", 1)[0])                                    //Extracts just the single line with the time, and converts it to type of number
 
         //ID
         fileObject.sections[i].id = i                                                                           //Adds a unique ID to each section
@@ -88,6 +88,6 @@ export function createEsbocoObject(string) {
             }
         }
     }
-    
+
     return fileObject
 }
