@@ -3,7 +3,7 @@ import "./Section.css"
 import ArrowButton from "./ArrowButton"
 import SectionColorBar from "./SectionColorBar"
 import SectionTopic from "./SectionTopic"
-import { getCurrentTimeSeconds, convertTimeStringToSeconds } from "../utils"
+import { getCurrentTimeSeconds, convertTimeStringToSeconds, convertDateToSeconds } from "../utils"
 
 export default function Section (props) {
 
@@ -30,11 +30,13 @@ export default function Section (props) {
         setIsCheckboxClicked(true)
 
         // A - get expected endtime
-        let expectedEndTime = convertTimeStringToSeconds(props.endingTime)
+        let expectedEndTime = convertDateToSeconds(props.endingTime)
+        console.log("expected ending time: " + expectedEndTime);
         //let expectedEndTime = 1800
 
         // B - get current time
-        let currentTime = getCurrentTimeSeconds()
+        let currentTime = convertDateToSeconds(new Date())
+        console.log("current time: " + currentTime);
         //let currentTime = 265
 
         // C - get the amount of time expected to remain (add all left secions)

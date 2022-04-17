@@ -28,3 +28,7 @@ export function convertTimeStringToSeconds(timeString){
     }
     return convertTimeObjectToSeconds(timeObj)
 }
+
+export function convertDateToSeconds(date) {
+    return ((date.getHours() * 3600) + (date.getMinutes() * 60) + date.getSeconds())
+}

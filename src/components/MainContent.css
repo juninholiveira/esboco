@@ -20,3 +20,10 @@
 .maincontent-ending > p {
     margin-right: 20px;
 }
+
+.maincontent-ending-label {
+    color: white;
+    font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

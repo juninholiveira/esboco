@@ -3,9 +3,12 @@ import "./MainContent.css"
 import Section from "./Section"
 import { createEsbocoObject } from "../markdownManager.js"
 
+import { TimeInput } from '@mantine/dates'
+import { Clock } from 'tabler-icons-react';
+
 export default function MainContent () {
 
-    const [endingTime, setEndingTime] = useState("")
+    const [endingTime, setEndingTime] = useState(new Date())
     const [fileObject, setFileObject] = useState("")
 
     //Create an Array of each sections time to pass to each section component for time calculations
@@ -47,8 +50,8 @@ export default function MainContent () {
             <div className="maincontent-header">
                 <h1 className="maincontent-title">{fileObject.title}</h1>
                 <div className="maincontent-ending">
-                    <p>Hora de Encerramento (HH/MM/SS):</p>
-                    <input className="maincontent-ending-timepicker" type="time" step="1" onChange={e => setEndingTime(e.target.value)} value={endingTime}/>
+                    <TimeInput label="Hora de Encerramento" classNames={{label: "maincontent-ending-label"}} icon={<Clock size={16}/>} onChange={setEndingTime} value={endingTime}/>
+                    {/* <input className="maincontent-ending-timepicker" type="time" step="1" onChange={e => setEndingTime(e.target.value)} value={endingTime}/> */}
                 </div>
                 <input className="maincontent-fileinput" type="file" accept=".md,.txt" onChange={handleFileLoaded}/>
             </div>
