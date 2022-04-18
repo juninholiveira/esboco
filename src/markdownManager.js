@@ -1,14 +1,11 @@
 let fileObject = {}
-let fileString = ""
 
 export function createEsbocoObject(string) {
     //Makes the complete file string available on the scope above, for other's functions access
-    fileString = string
+    let fileString = string
 
     //Gets the Title of the speech
     fileObject.title = fileString.split("\r", 1)[0]
-
-    
 
     //Sections loop
     fileObject.sections = []                                                                                    //Initialize the sections array

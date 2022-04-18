@@ -3,6 +3,10 @@
     margin-bottom: 10px;
 }
 
+.section-topic:last-child {
+    margin-bottom: 0px;
+}
+
 .topic-text {
     text-align: left;
     font-style: normal;

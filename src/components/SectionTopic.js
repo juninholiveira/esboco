@@ -5,8 +5,7 @@ import ArrowButton from "./ArrowButton"
 export default function SectionTopic (props) {
 
     const [isHiddenTextShown, setIsHiddenTextShown] = useState(false)
-
-    const hasHiddentext = props.hiddentext !== "" ? true : false
+    const hasHiddentext = props.hiddentext !== undefined ? true : false
 
     //Styles conditioning
     const tabSize = (60 * (props.level - 1)) + "px"
@@ -26,9 +25,9 @@ export default function SectionTopic (props) {
     return (
         <div className="section-topic" style={{ paddingLeft : tabSize }}>
             <div>
-                <ArrowButton handleClick={toggleHiddenText} isActivated={isHiddenTextShown} hasHiddentext={hasHiddentext}/>
+                <ArrowButton id="arrowbutton" handleClick={toggleHiddenText} isActivated={isHiddenTextShown} hasHiddentext={hasHiddentext}/>
             </div>
-            <div className="topic-text">
+            <div htmlFor="arrowbutton" className="topic-text">
                 <h3
                     className="topic-maintext"
                     style={{ color : mainTextColor }}

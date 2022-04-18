@@ -47,14 +47,14 @@ export default function MainContent () {
 
     return (
         <div className="maincontent-container">
-            <div className="maincontent-header">
-                <h1 className="maincontent-title">{fileObject.title}</h1>
+            {fileObject === "" && <div className="maincontent-form">
                 <div className="maincontent-ending">
-                    <TimeInput label="Hora de Encerramento" classNames={{label: "maincontent-ending-label"}} icon={<Clock size={16}/>} onChange={setEndingTime} value={endingTime}/>
-                    {/* <input className="maincontent-ending-timepicker" type="time" step="1" onChange={e => setEndingTime(e.target.value)} value={endingTime}/> */}
+                    <TimeInput label="Hora de Encerramento" classNames={{root: "maincontent-ending-root", label: "maincontent-ending-label"}} icon={<Clock size={16}/>} onChange={setEndingTime} value={endingTime}/>
                 </div>
-                <input className="maincontent-fileinput" type="file" accept=".md,.txt" onChange={handleFileLoaded}/>
-            </div>
+                <input id="fileinput" className="maincontent-fileinput" type="file" accept=".md,.txt" onChange={handleFileLoaded}/>
+                <label htmlFor="fileinput" className="maincontent-fileinput-label">Selecionar Discurso</label> 
+            </div>}
+            <h1 className="maincontent-title">{fileObject.title}</h1>
             {sectionsElements}
         </div>
     )

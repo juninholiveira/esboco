@@ -2,28 +2,45 @@
     padding: 50px;
 }
 
-.maincontent-header {    
+.maincontent-title {
+    margin-bottom: 30px;
+}
+
+.maincontent-form {    
     margin-bottom: 40px;
-}
-
-.maincontent-time {
-    margin-top: 10px;
-    margin-bottom: 10px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.maincontent-ending {
-    margin-top: 10px;
-    display: flex;
-}
-
-.maincontent-ending > p {
-    margin-right: 20px;
+.maincontent-ending-root {
+    width: 200px;
 }
 
 .maincontent-ending-label {
     color: white;
     font-family: "Inter", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.maincontent-fileinput {
+    display: none;
+}
+
+.maincontent-fileinput-label {
+    border-radius: 5px;
+    padding: 20px 10px;
+    width: 200px;
+    background-color: white;
+    color: #202020;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
