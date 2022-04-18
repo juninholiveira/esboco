@@ -1,5 +1,9 @@
 # Esboço app
 
+<p align="center">
+<img src="public/icon.png" alt="esboco" height="200">
+</p>
+
 ## Descrição
 Escolha a hora programada de termino do discurso, e depois carregue o discurso formatado em um arquivo .md
 
