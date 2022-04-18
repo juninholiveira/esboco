@@ -9,7 +9,7 @@ import { Clock } from 'tabler-icons-react';
 
 export default function MainContent () {
 
-    const [endingTime, setEndingTime] = useState(new Date())
+    const [endingTime, setEndingTime] = useState(new Date().setSeconds(0))
     const [fileObject, setFileObject] = useState("")
 
     //Create an Array of each sections time to pass to each section component for time calculations

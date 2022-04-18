@@ -5,8 +5,6 @@ import SectionColorBar from "./SectionColorBar"
 import SectionTopic from "./SectionTopic"
 
 export default function Section (props) {
-
-
     //To hide or show the content of this section
     const [isSectionContentShown, setIsContentShown] = useState(true)
     function toggleSectionContent(){
@@ -29,11 +27,9 @@ export default function Section (props) {
 
         // A - get expected endtime
         let expectedEndTime = convertDateToSeconds(props.endingTime)
-        console.log("expected ending time: " + expectedEndTime);
 
         // B - get current time
         let currentTime = convertDateToSeconds(new Date())
-        console.log("current time: " + currentTime);
 
         // C - get the amount of time expected to remain (add all left secions)
         let timeShouldLeft = 0
@@ -54,12 +50,38 @@ export default function Section (props) {
         return ((date.getHours() * 3600) + (date.getMinutes() * 60) + date.getSeconds())
     }
 
+    const totalSpeechTime = props.arrayOfSectionsTime.reduce(
+        ( acumulador, valorAtual ) => acumulador + valorAtual * 1000,
+        0)
+
+    let sumOfPreviousSections = 0
+    for(let i = 0; i < props.arrayOfSectionsTime.length; i++) {
+        if(i < props.id) {
+            sumOfPreviousSections += props.arrayOfSectionsTime[i] * 1000
+        }
+    }
+
+    const hour = new Date(props.endingTime - totalSpeechTime + sumOfPreviousSections).getHours().toLocaleString("pt-BR", {minimumIntegerDigits: 2, useGrouping:false})
+    const minute = new Date(props.endingTime - totalSpeechTime + sumOfPreviousSections).getMinutes().toLocaleString("pt-BR", {minimumIntegerDigits: 2, useGrouping:false})
+    const second = new Date(props.endingTime - totalSpeechTime + sumOfPreviousSections).getSeconds().toLocaleString("pt-BR", {minimumIntegerDigits: 2, useGrouping:false})
+      
+
+    const timeToStart =         
+            "(" +
+            //props.endingTime - tempo total do discurso + soma do tempo das seções anteriores (atual não)
+            hour + 
+            ":" +
+            minute +
+            ":" +
+            second + 
+            ")"
+
     return (
         <div className="section-container">
             <div className="section-title">
                 <input className="section-checkbox" name="section-checkbox" type="checkbox" onChange={calculateOffsetTime} checked={isCheckboxClicked} disabled={isCheckboxClicked}></input> 
                 <ArrowButton handleClick={toggleSectionContent} isActivated={isSectionContentShown} hasHiddentext="true"/>
-                <h2>{props.title}</h2>
+                <h2>{props.title} {timeToStart}</h2>
             </div>
             {isSectionContentShown && 
                 <div className="section-content">
