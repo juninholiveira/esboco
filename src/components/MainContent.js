@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import "./MainContent.css"
 import Section from "./Section"
+import DigitalClock from "./DigitalClock"
 import { createEsbocoObject } from "../markdownManager.js"
 
 import { TimeInput } from '@mantine/dates'
@@ -54,6 +55,7 @@ export default function MainContent () {
                 <input id="fileinput" className="maincontent-fileinput" type="file" accept=".md,.txt" onChange={handleFileLoaded}/>
                 <label htmlFor="fileinput" className="maincontent-fileinput-label">Selecionar Discurso</label> 
             </div>}
+            {fileObject !== "" && <DigitalClock className="digitalclock"/>}
             <h1 className="maincontent-title">{fileObject.title}</h1>
             {sectionsElements}
         </div>

@@ -1,5 +1,6 @@
 .maincontent-container {
     padding: 50px;
+    position: relative;
 }
 
 .maincontent-title {
