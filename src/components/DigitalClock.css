@@ -1,0 +1,16 @@
+.digitalclock {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.digitalclock > span {
+    color: #202020;
+    background-color: white;
+    font-size: 50px;
+    padding: 5px 5px 5px 15px;
+    width: 230px;
+    border-radius: 10px;
+}
