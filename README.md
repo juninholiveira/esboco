@@ -1,7 +1,7 @@
 # Esboço app
 
 <p align="center">
-<img src="public/icon.png" alt="esboco" height="200">
+<img src="public/logo512.png" alt="esboco" height="200">
 </p>
 
 ## Descrição
