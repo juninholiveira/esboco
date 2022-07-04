@@ -20,20 +20,6 @@ When checking each checkbox, the time left will be calculated to see if you're a
 
 ## Formatting
 
-Crie o arquivo .MD com a seguinte formatação exata:
-- Tema do Discurso: Número seguido de Tema na primeira linha (Ex.: "49 - Será que um dia a Terra vai ser limpa?")
-- Seção:
-  - @{Título}
-  - &{Tempo Total da Seção em Segundos}
-- Tópicos:
-  - #{Texto Principal de Tópico Nível 1} / ##{MTexto Principal de Tópico Nível 2} / ###{Texto Principal de Tópico Nível 3}
-  - ${Texto Escondido}
-- Versículos:
-  - %{Texto Principal} / ~{Texto Principal para CITAR}
-  - ${Texto Escondido}
-- Mídia:
-  - ^{Texto Principal}
-  
 Create the .MD file with the following formatting:
 - Speech Theme (Number followed by the Title on first line (i.e. "49 - Será que um dia a Terra vai ser limpa?")
 - Section
