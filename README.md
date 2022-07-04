@@ -1,25 +1,24 @@
-# Esboço app
+# esboco app
 
 <p align="center">
 <img src="public/logo512.png" alt="esboco" height="200">
 </p>
 
-## Descrição
-Escolha a hora programada de termino do discurso, e depois carregue o discurso formatado em um arquivo .md
+## Description
+Set the expected time for the speech to end, and then load the sketch written in a formatted .MD file.
 
-Ao começar a proferir, tique o Checkbox da primeira seção. Ao entrar na próxima seção, tique o Checkbox correspondente.
+When you begin to speak, check the checkbox for the first section. When you enter the next section, check its checkbox.
 
-Na frente de cada título de seção terá um horário (calculado automaticamente baseado na hora definida de têrmino), indicando em que hora específica você deveria estar começando aquela seção. Acompanhe pelo relógio no canto superior-direito.
+At the end of every Section Title, there will be a time stamp (automatic calculated based on the expected time to end), that indicates in which time you should already be when starting that section. You can accompain with the Clock on the top-right corner.
 
-Ao ticar cada Checkbox, o tempo restante será calculado para verificar se você está adiantado ou atrasado, e isso será revelado por um código de cores na barra vertical do lado esquerdo dos tópicos.
-- Vermelho: Muito atrasado, corra!
-- Amarelo: Um pouco atrasado, acelere um pouquinho
-- Branco: No tempo
-- Verde: Um pouco adiantado
-- Rosa: Muito adiantado
+When checking each checkbox, the time left will be calculated to see if you're ahead or behind, and the result will be revealed by a color-code in the vertical bar at left of the text.
+- Red: Much behind, run!
+- Yellow: A little behind, just speak a little bit faster
+- White: On time
+- Green: A little ahead
+- Pink: Much ahead
 
-
-## Formatação
+## Formatting
 
 Crie o arquivo .MD com a seguinte formatação exata:
 - Tema do Discurso: Número seguido de Tema na primeira linha (Ex.: "49 - Será que um dia a Terra vai ser limpa?")
@@ -34,3 +33,17 @@ Crie o arquivo .MD com a seguinte formatação exata:
   - ${Texto Escondido}
 - Mídia:
   - ^{Texto Principal}
+  
+Create the .MD file with the following formatting:
+- Speech Theme (Number followed by the Title on first line (i.e. "49 - Será que um dia a Terra vai ser limpa?")
+- Section
+  - @{Title}
+  - &{Total time in seconds}
+- Topics:
+  - #{Level 1 Main Text} / ##{Level 2 Main Text} / ###{Level 3 Main Text}
+  - ${Hidden Text}
+- Verses:
+  - %{Main Text} / ~{Main Text FOR CITATION}
+  - ${Hidden Text}
+- Media:
+  - ^{Main Text}
